@@ -4,7 +4,8 @@
  * and open the template in the editor.
  */
 package javaprojectbodgev1;
-
+import java.io.InputStream;
+import java.util.Scanner;
 /**
  *
  * @author J
@@ -13,17 +14,21 @@ public class Player1 extends Player{
 
     public Player1(String name) {
         super(name);
-    }
+    } //constructor.
     
     public Roshambo generateRoshambo(){
-        System.out.println("Please select your move");
-        String PlayerSelect = "test";
+        Scanner scanner = new Scanner( System.in );
+        System.out.println("Please select your move"); //specifications required that i implement it in this class, might as well give it a purpose
+        String PlayerSelect = scanner.nextLine();
         switch (PlayerSelect){
-            case "test":
-                Roshambo = Roshambo.SCISSORS;
+            case "R":
+                Roshambo = Roshambo.ROCK;
                 break;
-            default:
-                System.out.println("how did this even happen? this is a locked debug statement.");
+            case "P":
+                Roshambo = Roshambo.PAPER;
+                break;
+            case "S":
+                Roshambo = Roshambo.SCISSORS;
                 break;
     }
         return Roshambo; 
