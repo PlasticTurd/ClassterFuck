@@ -11,12 +11,12 @@ package javaprojectbodgev1;
  */
 public class Bart extends Player{
 
-    public Bart(String name, Roshambo Roshambo) {
-        super(name, Roshambo);
+    public Bart() {
+        super("Bart");
     }
 
 public Roshambo generateRoshambo(){
-    return Roshambo.A; 
+    return Roshambo.ROCK; 
 }
 
 }

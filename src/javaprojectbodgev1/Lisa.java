@@ -11,8 +11,8 @@ import java.util.Random;
  */
 public class Lisa extends Player {
 
-    public Lisa(String name, Roshambo Roshambo) {
-        super(name, Roshambo);
+    public Lisa() {
+        super("Lisa");
     }
     
     public Roshambo generateRoshambo(){
@@ -20,13 +20,13 @@ public class Lisa extends Player {
         int randomInt = randomGenerator.nextInt(2);
         switch (randomInt) {
             case 0:
-                Roshambo = Roshambo.A;
+                Roshambo = Roshambo.ROCK;
                 break;
             case 1:
-                Roshambo = Roshambo.B;
+                Roshambo = Roshambo.PAPER;
                 break;
             case 2:
-                Roshambo = Roshambo.C;
+                Roshambo = Roshambo.SCISSORS;
                 break;
         }
     return Roshambo;

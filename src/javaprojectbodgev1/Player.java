@@ -11,9 +11,9 @@ package javaprojectbodgev1;
  */
 public abstract class Player {
     public enum Roshambo {
-        A("rock"), 
-        B("paper"), 
-        C("scissors");
+        ROCK("rock"), 
+        PAPER("paper"), 
+        SCISSORS("scissors");
         
         private String val;
         Roshambo(String val) {
@@ -24,11 +24,12 @@ public abstract class Player {
             return val;
         }
     };
+    
     public String name;
     public Roshambo Roshambo;
     public abstract Roshambo generateRoshambo();
-    public Player(String name, Roshambo Roshambo) {
+    public Player(String name) {
         this.name = name;
-        this.Roshambo = Roshambo;
+        this.Roshambo = Roshambo.ROCK;
     }
 }
