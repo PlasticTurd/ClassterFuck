@@ -16,6 +16,16 @@ public class Player1 extends Player{
     }
     
     public Roshambo generateRoshambo(){
-        return Roshambo.ROCK;
+        System.out.println("Please select your move");
+        String PlayerSelect = "test";
+        switch (PlayerSelect){
+            case "test":
+                Roshambo = Roshambo.SCISSORS;
+                break;
+            default:
+                System.out.println("how did this even happen? this is a locked debug statement.");
+                break;
+    }
+        return Roshambo; 
 }
 }

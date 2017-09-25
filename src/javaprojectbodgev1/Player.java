@@ -30,6 +30,6 @@ public abstract class Player {
     public abstract Roshambo generateRoshambo();
     public Player(String name) {
         this.name = name;
-        this.Roshambo = Roshambo.ROCK;
+        this.Roshambo = Roshambo.PAPER;
     }
 }
