@@ -22,24 +22,41 @@ public class RoshamboApp {
         Player player2 = new Bart(); //i don't know why this has to be here but it does
         
         Scanner scanner = new Scanner( System.in );
+        
+        Boolean ValidInput = false;
+        
         System.out.println("Welcome to the game that has nothing to do with Roshambo!");
         System.out.println("Please state your name!");
         String PlayerName =  scanner.nextLine(); //gets player input
         Player Player1 =  new Player1(PlayerName); /*sets the "name" value of the palyer1 class
         to the string input by the user
         */
+        
+        do {
+        ValidInput = false;
         System.out.println("Greetings, " + Player1.name + ". Please selectt your opponent. ('BART' or 'LISA') ");
         String AIName = scanner.nextLine();
         switch (AIName) {
             case "BART":
+                
+                System.out.println("BART selected, ValidInput True");
+                player2 = new Bart();
+                ValidInput = true;
                 break;
+            
             case "LISA":
+                System.out.println("LISA selected, ValidInput True");
                 player2 = new Lisa();
+                ValidInput = true;
                 break;
+                
             default:
-                System.out.println("ERROR: invalid input exception. press any key to terminate"); //placeholder to prevent crashing until this is given its own method with loops 'n shit
-                scanner.next();       
+                player2.name = "ERROR";
+                System.out.println("NEITHER selected, ValidInput False");
+                ValidInput = false;
         }
+        } while (ValidInput == false);
+        
         System.out.println(Player1.name + " VS. " + player2.name);
         System.out.println("PLAYER1 VALUE " + Player1.generateRoshambo()); //debugging Player1 class's implimentation
         System.out.println("PLAYER2 VALUE " + player2.generateRoshambo()); //debugging Player2 class's implimentation
