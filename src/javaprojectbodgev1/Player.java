@@ -30,6 +30,6 @@ public abstract class Player {
     public abstract Roshambo generateRoshambo();
     public Player(String name) {
         this.name = name;
-        this.Roshambo = Roshambo.PAPER; //sets a default value for Roshambo because otherwise java throws a hissyfit
+        this.Roshambo = Roshambo.ROCK; //sets a default value for Roshambo because otherwise java throws a hissyfit
     }
 }

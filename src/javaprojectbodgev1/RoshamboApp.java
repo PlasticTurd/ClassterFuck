@@ -56,13 +56,13 @@ public class RoshamboApp {
                 ValidInput = false;
         }
         } while (ValidInput == false);
-        
+        while (true){
         System.out.println(Player1.name + " VS. " + player2.name);
         System.out.println("PLAYER1 VALUE " + Player1.generateRoshambo()); //debugging Player1 class's implimentation
         System.out.println("PLAYER2 VALUE " + player2.generateRoshambo()); //debugging Player2 class's implimentation
         System.out.println("PLAYER1 STRING " + Player1.Roshambo.val());
         System.out.println("PLAYER2 STRING " + player2.Roshambo.val());
-        scanner.next(); //keeps the program running long enough to read output because i haven't implemented a loop yet
+    }
     }
 }
 
