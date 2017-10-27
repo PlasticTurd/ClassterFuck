@@ -30,6 +30,8 @@ public class Player1 extends Player{
             case "S":
                 Roshambo = Roshambo.SCISSORS;
                 break;
+            case "QUIT":
+                System.exit(0);
     }
         return Roshambo; 
 }

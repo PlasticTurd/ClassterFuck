@@ -25,9 +25,12 @@ public class RoshamboApp {
         
         Boolean ValidInput = false;
         
-        System.out.println("Welcome to the game that has nothing to do with Roshambo!");
+        System.out.println("Welcome to the game that has nothing to do with Roshambo! you can exit the application at any time by typing 'QUIT' ");
         System.out.println("Please state your name!");
         String PlayerName =  scanner.nextLine(); //gets player input
+        if (PlayerName == "QUIT") {
+            System.exit(0);
+        }
         Player Player1 =  new Player1(PlayerName); /*sets the "name" value of the palyer1 class
         to the string input by the user
         */
@@ -49,7 +52,8 @@ public class RoshamboApp {
                 player2 = new Lisa();
                 ValidInput = true;
                 break;
-                
+            case "QUIT":
+                System.exit(0);
             default:
                 player2.name = "ERROR";
                 System.out.println("NEITHER selected, ValidInput False");

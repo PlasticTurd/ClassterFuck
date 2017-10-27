@@ -1,0 +1,6 @@
+Welcome to the game that has nothing to do with Roshambo! you can exit the application at any time by typing 'QUIT' 
+Please state your name!
+QUIT
+Greetings, QUIT. Please selectt your opponent. ('BART' or 'LISA') 
+QUIT
+BUILD SUCCESSFUL (total time: 9 seconds)
