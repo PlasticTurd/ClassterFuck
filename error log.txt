@@ -1,0 +1,22 @@
+Please state your name!
+Jamie
+Greetings, Jamie. Please selectt your opponent. ('BART' or 'LISA') 
+LISA
+LISA selected, ValidInput True
+Please select your move
+S
+Lisa won against Jamie. SUMMARY:Jamie: SCISSORS | Lisa: ROCK
+Please select your move
+R
+Jamie won against Lisa. SUMMARY:Jamie: ROCK | Lisa: PAPER <---- erroneous result
+Please select your move
+S
+Jamie won against Lisa. SUMMARY:Jamie: SCISSORS | Lisa: PAPER
+Please select your move
+P
+Jamie won against Lisa. SUMMARY:Jamie: PAPER | Lisa: ROCK
+Please select your move
+R
+Draw! won against ). SUMMARY:Jamie: ROCK | Lisa: ROCK
+Please select your move
+BUILD STOPPED (total time: 2 minutes 31 seconds)

@@ -11,16 +11,16 @@ package javaprojectbodgev1;
  */
 public abstract class Player {
     public enum Roshambo {
-        ROCK("rock"), 
-        PAPER("paper"), 
-        SCISSORS("scissors");
+        ROCK(1), 
+        PAPER(2), 
+        SCISSORS(3);
         
-        private String val;
-        Roshambo(String val) {
+        private int val;
+        Roshambo(int val) {
             this.val = val;
         }
         
-        public String val() {
+        public int val() {
             return val;
         }
     };

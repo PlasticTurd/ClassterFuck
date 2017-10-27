@@ -62,8 +62,31 @@ public class RoshamboApp {
 //        System.out.println("PLAYER2 VALUE " + player2.generateRoshambo()); //debugging Player2 class's implimentation
 //        System.out.println("PLAYER1 STRING " + Player1.Roshambo.val());
 //        System.out.println("PLAYER2 STRING " + player2.Roshambo.val());
-          Player1.generateRoshambo();
-          player2.generateRoshambo();
+          String _player1Move = ("" + Player1.generateRoshambo());
+          String _player2Move = ("" + player2.generateRoshambo());
+          int _total = Math.abs(Player1.Roshambo.val() - player2.Roshambo.val());
+          String _resultWinner = ("");
+          String _resultLoser = ("");
+          String _resultSummary = ("");
+          switch (_total) {
+              case 0:
+                  _resultWinner = ("Draw! No one");
+                  _resultLoser = ("anyone.");
+                  break;
+              case 1:
+                  _resultWinner = (Player1.name);
+                  _resultLoser = (player2.name);
+                  break;
+              case 2:
+                  _resultWinner = (player2.name);
+                  _resultLoser = (Player1.name);
+                  break;
+              default:
+                  System.out.println("Unknown error determining winner, result out of logical bounds");
+              
+          }
+          _resultSummary = (_resultWinner + " won against " + _resultLoser + ". SUMMARY: " + Player1.name + ": " + _player1Move + " | " + player2.name + ": " + _player2Move);
+          System.out.println(_resultSummary);
           //each enum constant assigned a number
           //rock = 1, paper = 2, scissors = 3;
           //player1.number - player2.number
