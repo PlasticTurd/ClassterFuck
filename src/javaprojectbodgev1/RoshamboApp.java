@@ -39,7 +39,8 @@ public class RoshamboApp {
         ValidInput = false;
         System.out.println("Greetings, " + Player1.name + ". Please selectt your opponent. ('BART' or 'LISA') ");
         String AIName = scanner.nextLine();
-        switch (AIName) {
+        
+        switch (AIName.toUpperCase()) {
             case "BART":
                 
                 System.out.println("BART selected, ValidInput True");
