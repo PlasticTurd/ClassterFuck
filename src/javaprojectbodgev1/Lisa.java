@@ -17,7 +17,7 @@ public class Lisa extends Player {
     
     public Roshambo generateRoshambo(){
         Random randomGenerator = new Random();
-        int randomInt = randomGenerator.nextInt(2);
+        int randomInt = randomGenerator.nextInt(3);
         switch (randomInt) {
             case 0:
                 Roshambo = Roshambo.ROCK;
